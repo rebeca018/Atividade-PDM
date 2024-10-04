@@ -44,7 +44,17 @@ const tabuada = function(){
 
 
     let saida = document.getElementById("t")
-      saida.innerHTML= number+ "x0=" + zero + "     " + number+ "x1=" + um + "     " + number+ "x2=" + dois + "     " + number+ "x3=" + tres + "     " + number+ "x4=" + quatro + "     " + number+ "x5=" + cinco + "     " + number+ "x6=" + seis + "     " + number+ "x7=" + sete + "     " + number+ "x8=" + oito + "     " + number+ "x9=" + nove + "     " + number+ "x10=" + dez
+      saida.innerHTML= number + " x 0 = " + zero + "<br>" + 
+      number + " x 1 = " + um + "<br>" + 
+      number + " x 2 = " + dois + "<br>" + 
+      number + " x 3 = " + tres + "<br>" + 
+      number + " x 4 = " + quatro + "<br>" + 
+      number + " x 5 = " + cinco + "<br>" + 
+      number + " x 6 = " + seis + "<br>" + 
+      number + " x 7 = " + sete + "<br>" + 
+      number + " x 8 = " + oito + "<br>" + 
+      number + " x 9 = " + nove + "<br>" + 
+      number + " x 10 = " + dez;
       
 }
 
@@ -71,6 +81,107 @@ const maiorValor = function(){
 
 const impar = function(){
     const vetor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let impar = []
 
-    vetor.filter()
+    for (let i = 0; i < vetor.length; i++){
+        if (vetor[i] % 2 !== 0){
+            impar += vetor[i]
+        }
+    }
+
+    let saida = document.getElementById("i")
+    saida.innerHTML= "Valores ímpares: " + impar
+}
+
+const nomeReverse = function(){
+    let nome = document.getElementById("nome").value;
+    let nomeInvertido = nome.split('').reverse().join('');
+
+    let saida = document.getElementById("n")
+    saida.innerHTML= nomeInvertido
+}
+
+        
+const funcionarios = [];
+const salarioMinimo = 1412.00; 
+        
+const cadastreFuncionario = function() {
+    const nome = document.getElementById("nomef").value;
+    const idade = parseInt(document.getElementById("idade").value);
+    const sexo = document.getElementById("sexo").value;
+    const salario = parseFloat(document.getElementById("salario").value);
+
+    const funcionario = {
+        nome: nome,
+        idade: idade,
+        sexo: sexo,
+        salario: salario
+    };
+
+    funcionarios.push(funcionario);
+
+    document.getElementById("nome").value = "";
+    document.getElementById("idade").value = "";
+    document.getElementById("sexo").value = "";
+    document.getElementById("salario").value = "";
+
+}
+
+const exibeFuncionario = function () {
+    let resultado = "Funcionários que ganham mais de um salário mínimo:<br>";
+
+    for (let i = 0; i < funcionarios.length; i++) {
+        if (funcionarios[i].salario >= salarioMinimo) {
+            resultado += `Nome: ${funcionarios[i].nome}, Idade: ${funcionarios[i].idade}, Sexo: ${funcionarios[i].sexo}, Salário: R$ ${funcionarios[i].salario.toFixed(2)}<br>`;
+        }
+    }
+
+    if (resultado === "Funcionários que ganham mais de um salário mínimo:<br>" ){
+        resultado = "Nenhum funcionário cadastrado que ganhe mais de um salário mínimo"
+    }
+
+    let saida = document.getElementById("funcionarios")
+    saida.innerHTML= resultado;
+}
+
+
+function adicao(a, b) {
+    return a + b;
+}
+
+function subtracao(a, b) {
+    return a - b;
+}
+
+function multiplicacao(a, b) {
+    return a * b;
+}
+
+function divisao(a, b) {
+    if (b === 0) {
+        return "Erro: Divisão impossível";
+    }
+    return a / b;
+}
+
+const calcular = function(){
+    let a = parseFloat(document.getElementById("calc1").value)
+    let b = parseFloat(document.getElementById("calc2").value)
+
+    const resAdicao = adicao(a, b)
+    const resSubt = subtracao(a, b)
+    const resMulti = multiplicacao(a, b)
+    const resDivisao = divisao(a, b)
+
+    let saida1 = document.getElementById("adicao")
+    saida1.innerHTML= a + " + " + b + " = " + resAdicao
+
+    let saida2 = document.getElementById("subt")
+    saida2.innerHTML= a + " - " + b + " = " + resSubt
+
+    let saida3 = document.getElementById("multi")
+    saida3.innerHTML= a + " × " + b + " = " + resMulti
+
+    let saida4 = document.getElementById("divisao")
+    saida4.innerHTML= a + " ÷ " + b + " = " + resDivisao
 }
