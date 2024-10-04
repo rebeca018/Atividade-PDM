@@ -62,8 +62,9 @@ const maiorValor = function(){
     let number1 = parseFloat(document.getElementById("number1").value)
     let number2 = parseFloat(document.getElementById("number2").value)
     let number3 = parseFloat(document.getElementById("number3").value)
+    let number4 = parseFloat(document.getElementById("number4").value)
     
-    if (number1 == -1 || number2 == -1 || number3 == -1){
+    if (number1 == -1 || number2 == -1 || number3 == -1 || number4 == -1){
         let valores = [number1, number2, number3];
         valores = valores.filter(v => v > 0);
 
