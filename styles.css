@@ -1,0 +1,23 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000; 
+}
+
+.exercicio{
+    margin: 20px;
+    background-color: #90bad7;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+input{
+    border-radius: 3px;
+    border-color: #045a9c;
+}
+
+
+button{
+    background-color: #c6a6eb;
+    border-color: #43206b;
+    border-radius: 3px;
+}

@@ -3,107 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
 </head>
 <body>
     <h1>Programação para dispositivos móveis 2</h1>
 
-    <!-- 2) Desenvolva um programa que receba a leitura de dois números ponto flutuante e informe a soma dos dois. -->
-    <h2>Soma</h2>
-        <p>Insira dois números</p>
-        <input type="number" name="numero1" id="numero1">
-        <input type="number" name="numero2" id="numero2">
-        <button onclick="somar()">Somar</button>
-        <p id="res"></p>
+    <div class="exercicio">
+        <!-- 2) Desenvolva um programa que receba a leitura de dois números ponto flutuante e informe a soma dos dois. -->
+        <h2>Soma</h2>
+            <p>Insira dois números</p>
+            <input type="number" name="numero1" id="numero1">
+            <input type="number" name="numero2" id="numero2">
+            <button onclick="somar()">Somar</button>
+            <p id="res"></p>
+    </div>
 
-    <!-- 3) Crie um código que seja capaz de ler 4 notas de um aluno e realizar a média
-        aritmética delas informando o status do aluno. (Obs.: Aprovado se média maior
-        que sete, caso contrário reprovado) -->
-    <h2>Média</h2>
-        <p>Insira a nota do aluno</p>
-            <p>Nota 1</p>
-            <input type="number" name="nota1" id="nota1">
-            <p>Nota 2</p>
-            <input type="number" name="nota2" id="nota2">
-            <p>Nota 3</p>
-            <input type="number" name="nota3" id="nota3">
-            <p>Nota 4</p>
-            <input type="number" name="nota4" id="nota4">
-            <button onclick="media()">Calcular Média</button>
-            <p id="nota"></p>
+    <div class="exercicio">
+        <!-- 3) Crie um código que seja capaz de ler 4 notas de um aluno e realizar a média
+            aritmética delas informando o status do aluno. (Obs.: Aprovado se média maior
+            que sete, caso contrário reprovado) -->
+        <h2>Média</h2>
+            <p>Insira a nota do aluno</p>
+                <p>Nota 1</p>
+                <input type="number" name="nota1" id="nota1">
+                <p>Nota 2</p>
+                <input type="number" name="nota2" id="nota2">
+                <p>Nota 3</p>
+                <input type="number" name="nota3" id="nota3">
+                <p>Nota 4</p>
+                <input type="number" name="nota4" id="nota4">
+                <button onclick="media()">Calcular Média</button>
+                <p id="nota"></p>
+    </div>
 
-    <!--5) Codifique um programa que dado um numeral inteiro ele informe a tabuada
-        do mesmo de zero a dez. -->
-    <h2>Tabuada</h2>
-        <p>Insira um número inteiro</p>
-        <input type="number" name="number" id="number">
-        <button onclick="tabuada()">Calcular Tabuada</button>
-        <p id="t"></p>
+    <div class="exercicio">
+        <!--5) Codifique um programa que dado um numeral inteiro ele informe a tabuada
+            do mesmo de zero a dez. -->
+        <h2>Tabuada</h2>
+            <p>Insira um número inteiro</p>
+            <input type="number" name="number" id="number">
+            <button onclick="tabuada()">Calcular Tabuada</button>
+            <p id="t"></p>
+    </div>
 
+    <div class="exercicio">
+        <!--6) Escreva um código que seja capaz de ler 3 valores positivos e informe o maior
+            valor dentre eles após o usuário entrar com o valor -1.-->
+        <h2>Maior valor</h2>
+            <p>Valor 1</p>
+            <input type="number" name="number1" id="number1">
+            <p>Valor 2</p>
+            <input type="number" name="number2" id="number2">
+            <p>Valor 3</p>
+            <input type="number" name="number3" id="number3">
+            <button onclick="maiorValor()">Maior valor</button>
+            <p id="m"></p>
 
-    <!--6) Escreva um código que seja capaz de ler 3 valores positivos e informe o maior
-        valor dentre eles após o usuário entrar com o valor -1.-->
-    <h2>Maior valor</h2>
-        <p>Valor 1</p>
-        <input type="number" name="number1" id="number1">
-        <p>Valor 2</p>
-        <input type="number" name="number2" id="number2">
-        <p>Valor 3</p>
-        <input type="number" name="number3" id="number3">
-        <button onclick="maiorValor()">Maior valor</button>
-        <p id="m"></p>
+    </div>
 
-    <!--7) Crie um algoritmo que receba um vetor de 10 posições com os valores 1, 2, 3,
-        4, 5, 6, 7, 8, 9 e 10 e imprima os valores ímpares.-->
-    <h2>Ímpar</h2>
-        <button onclick="impar()">ímpar</button>
-        <p id="i"></p>
+    <div class="exercicio">
+        <!--7) Crie um algoritmo que receba um vetor de 10 posições com os valores 1, 2, 3,
+            4, 5, 6, 7, 8, 9 e 10 e imprima os valores ímpares.-->
+        <h2>Ímpar</h2>
+            <button onclick="impar()">ímpar</button>
+            <p id="i"></p>
 
-    
-    <!-- 8) Crie um programa que leia seu nome e o escreva de trás para frente.-->
-    <h2>Nome ao contrário</h2>
-    <input type="text" name="nome" id="nome">
-        <button onclick="nomeReverse()">Inverta o seu nome</button>
-        <p id="n"></p>
+    </div>
 
-    <!-- 9) Desenvolva um programa use uma estrutura simbolizando um
-        funcionário(nome, idade, sexo, salário). Seu programa deve aceitar a leitura de
-        no mínimo 5 funcionários. No final deve imprimir todos os funcionários que
-        ganham mais do que um salário mínimo.-->
-    
-    <h2>Cadastre um funcionário</h2>
-        <p>Nome:</p>
-        <input type="text" name="nomef" id="nomef">
-        <p>Idade:</p>
-        <input type="number" name="idade" id="idade">
-        <p>Sexo:</p>
-        <input type="text" name="sexo" id="sexo">
-        <p>Salário:</p>
-        <input type="number" name="salario" id="salario">
-        <button onclick="cadastreFuncionario()">Adicione Funcionário</button>
+    <div class="exercicio">
+        <!-- 8) Crie um programa que leia seu nome e o escreva de trás para frente.-->
+        <h2>Nome ao contrário</h2>
+        <input type="text" name="nome" id="nome">
+            <button onclick="nomeReverse()">Inverta o seu nome</button>
+            <p id="n"></p>
+
+    </div>
+
+    <div class="exercicio">
+        <!-- 9) Desenvolva um programa use uma estrutura simbolizando um
+            funcionário(nome, idade, sexo, salário). Seu programa deve aceitar a leitura de
+            no mínimo 5 funcionários. No final deve imprimir todos os funcionários que
+            ganham mais do que um salário mínimo.-->
         
-        <br>
-        <br>
-        <button onclick="exibeFuncionario()">Exibe Funcionário</button>
-        <p id="funcionarios"></p>
+        <h2>Cadastre um funcionário</h2>
+            <p>Nome:</p>
+            <input type="text" name="nomef" id="nomef">
+            <p>Idade:</p>
+            <input type="number" name="idade" id="idade">
+            <p>Sexo:</p>
+            <input type="text" name="sexo" id="sexo">
+            <p>Salário:</p>
+            <input type="number" name="salario" id="salario">
+            <button onclick="cadastreFuncionario()">Adicione Funcionário</button>
+            
+            <br>
+            <br>
+            <button onclick="exibeFuncionario()">Exibe Funcionário</button>
+            <p id="funcionarios"></p>
+    </div>
 
-    <!-- 
+    <div class="exercicio">
+        <!-- 
 
-        10) Crie um programa que utilize os conceitos de funções para simular as quatro
-        operações básicas da matemática(adição, subtração, multiplicação e divisão) cada
-        função deve retornar o resultado da operação.
-    --> 
-    <h2>Cálculos</h2>
-    <p>Insira dois números:</p>
-    <input type="number" name="calc1" id="calc1">
-    <input type="number" name="calc2" id="calc2">
-        <button onclick="calcular()">calcular</button>
-        <p id="adicao"></p>
-        <p id="subt"></p>
-        <p id="multi"></p>
-        <p id="divisao"></p>
-
+            10) Crie um programa que utilize os conceitos de funções para simular as quatro
+            operações básicas da matemática(adição, subtração, multiplicação e divisão) cada
+            função deve retornar o resultado da operação.
+        --> 
+        <h2>Cálculos</h2>
+        <p>Insira dois números:</p>
+        <input type="number" name="calc1" id="calc1">
+        <input type="number" name="calc2" id="calc2">
+            <button onclick="calcular()">calcular</button>
+            <p id="adicao"></p>
+            <p id="subt"></p>
+            <p id="multi"></p>
+            <p id="divisao"></p>
+    </div>
 
     <script src='index.js' ></script>
 </body>
